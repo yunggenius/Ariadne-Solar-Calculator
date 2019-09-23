@@ -1,1 +1,81 @@
-/* All style here */
+* {box-sizing: border-box;}
+body {
+	color: white;
+	background-image: url("https://res.cloudinary.com/awesocode/image/upload/v1569269275/Team%20Ariadne%27s%20Task%20Files/tvefucfi6wgtghli90qn.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.logo li{
+	list-style-type: none;
+}
+#offgrid{
+	color: red;
+	margin-left: 30px;
+	margin-top: -15px;
+	font-weight: bold;
+}
+#systems{
+	margin-top: -7px;
+	letter-spacing: 0.5em;
+}
+.active{border: 1px solid white;}
+.topnav {
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: -50px;
+}
+
+.topnav a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 5px 12px;
+  text-decoration: none;
+}
+.topnav a:hover {
+	background-color: green;
+}
+table, thead, th, #tbody, #tbody td{padding-right: 10px;}
+.aside{
+	background-color:#004000;
+	width: 850px;
+	padding-left: 5px;
+	border-radius: 5px; 
+}
+.col-md-8 h2{
+	margin-top: 60px;
+	text-align: center;
+	font-weight: bolder;
+	text-shadow: 5px 5px 5px black; 
+
+}
+.col-md-8 p{
+	text-align: center;
+	color:#B0B0B0;
+	margin-top: 5px;
+}
+#tbody td{
+	padding-bottom: 10px;
+}
+#tbody td input[type=text]{
+	border-radius: 5px;
+}
+#addItem{
+	margin-top: 10px;
+	margin-left: 7px;
+	margin-bottom: 5px;
+	padding: 3px;
+}
+#total ul li{
+	list-style-type: none;
+	display: inline-block;
+	float: right;
+	padding: 0px 50px;
+	margin-right: -50px;
+	margin-top: 40px; 
+}
+footer {
+	margin-top: 20px;
+}
