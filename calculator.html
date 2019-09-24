@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:500">
     <title>Ariadne Solar Calculation</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/calculator.js">
+    </script>
+
 </head>
 <body>
 	<header>
@@ -38,41 +41,60 @@
 						<th><h6 align="center">On at Same Time*</h6></th>
 						<th><h6 align="center">Quantity</h6></th>
 						<th><h6 align="center">AC Surge*</h6></th>
-						<th><h6 align="left">Watts Hours/Day</h6></th>
+						<th><h6 align="left">AC Watts</h6></th>
 						<th><h6 align="center">DC Watts*</h6></th>
 						<th><h6 align="left">Hours On per Day</h6></th>
-						<th><h6 align="center">AC Watts</h6></th>
+						<th><h6 align="center">Watts Hours/Day</h6></th>
 						</tr>
 					</thead>
 					<tr id="tbody">
-						<td><input type="text" name="text" style="width: 180px;"></td>
+						<!-- Drop down for some appliances @yinkaaaaaa -->
+
+						<td>
+							<select style="width: 180px;">
+									  <option value="laptop">Computer (Laptop)</option>
+									  <option value="desktop">Computer (Desktop)</option>
+									  <option value="cofee">Cofee Pot</option>
+									  <option value="microwave">Microwave</option>
+									  <option value="toaster">Toaster</option>
+									  <option value="hot">Hot Plate</option>
+								</select>
+									</td>
 						<td><input type="checkbox" style="width: 80px;"></td>
-						<td><input type="text" name="text" style="width: 60px;"></td>
+						<td><input type="text" id="box3" name="text" style="width: 60px;" oninput="calculate()"></td>
+						<td><input type="text" name="text" style="width: 70px;"></td>							<td>
+								<!-- watts value in numerals @yinkaaaaaa -->
+								<select id="box1" oninput="calculate()" style="width: 60px;">
+									<option value="50">50</option>
+									<option value="150">150</option>
+									<option value="200">200</option>
+									<option value="1500">1500</option>
+									<option value="1500">1500</option>
+									<option value="1200">1200</option>
+								</select>
 						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
+						<td><input type="text" name="text" id="box2" style="width: 70px;" oninput="calculate()"></td>
+						<td><input type="text" name="text" id="result" style="width: 70px;" oninput="calculate()"></td>
 					</tr>
 					<tr id="tbody">
 						<td><input type="text" name="text" style="width: 180px;"></td>
 						<td><input type="checkbox" style="width: 80px;"></td>
-						<td><input type="text" name="text" style="width: 60px;"></td>
+						<td><input type="text" name="text" id="cat3" style="width: 60px;" oninput="calculate()"></td>
 						<td><input type="text" name="text" style="width: 70px;"></td>
+						<td><input type="text" name="text" id="cat1" style="width: 70px;" oninput="calculate()"></td>
 						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
+						<td><input type="text" name="text" id="cat2" style="width: 70px;" oninput="calculate()"></td>
+						<td><input type="text" name="text" id="result3" style="width: 70px;" oninput="calculate()"></td>
 					</tr>
 					<tr id="tbody">
 						<td><input type="text" name="text" style="width: 180px;"></td>
 						<td><input type="checkbox" style="width: 80px;"></td>
-						<td><input type="text" name="text" style="width: 60px;"></td>
+						<td><input type="text" name="text" id="dog1" style="width: 60px;" oninput="calculate()"></td>
 						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
-						<td><input type="text" name="text" style="width: 70px;"></td>
+						<td><input type="text" name="text" id="dog2" style="width: 70px;" oninput="calculate()"></td>
+						<td><input type="text" name="text" style="width: 70px;" ></td>
+						<td><input type="text" name="text" id="dog3" style="width: 70px;" oninput="calculate()"></td>
+						<td><input type="text" name="text" id="result4" style="width: 70px;" oninput="calculate()"></td>
 					</tr>
 				</table>
 				<button id="addItem" onclick="myFunction()">Add Load</button>
@@ -82,12 +104,12 @@
 					<li id="watt">
 						<h6>TOTAL WATT-</h6>
 						<h6>HOURS/DAY:</h6>
-						<input id="tW" type="text" placeholder="W" style="width:100px; height: 30px;">
+						<input id="result2" type="text" placeholder="W" style="width:100px; height: 30px;">
 					</li>
 					<li>
 						<h6>TOTAL KILOWATT-</h6>
 						<h6>MONTH:</h6>
-						<input id="tKW" type="text" placeholder="kWh" align="right" style="width:100px; height: 30px;">
+						<input id="resultKW" type="text" placeholder="kWh" align="right" style="width:100px; height: 30px;">
 					</li>
 				</ul>
 			</aside>
