@@ -8,9 +8,6 @@ body {
 	background-position: center;
 	font-family: Montserrat;
 }
-.logo li{
-	list-style-type: none;
-}
 header a{
     font-weight: 500;
     font-size: 16px;
@@ -29,11 +26,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    background: rgba(0, 46, 4, 0.57);
+    background: rgba(0, 46, 4, 0.1);
 }
 .logo {
     cursor: pointer;
-    margin-left: -30px;
+    margin-left: -10px;
 }
 .nav_links {
     list-style: none;
@@ -48,7 +45,7 @@ header {
 }
 
 table{width: 60%; margin-left: 5px;}
-table, thead, th, #tbody, #tbody td{padding-right: 5px;}
+table, thead, th, .tbody, .tbody td{padding-right: 5px;}
 #bg {background-color:#003C00; width: 60%; margin-left: 40%; border-radius: 7px;}
 .content h2{
 	margin-left: 35%;
@@ -63,7 +60,7 @@ table, thead, th, #tbody, #tbody td{padding-right: 5px;}
 	margin-top: 5px;
 	margin-left: 5%;
 }
-#tbody td input[type=text]{
+.tbody td input[type=text]{
 	border-radius: 3px;
 }
 #addItem{
@@ -72,6 +69,7 @@ table, thead, th, #tbody, #tbody td{padding-right: 5px;}
 	margin-bottom: 5px;
 	padding: 3px;
 }
+td button{color: red; background-color:#003C00;}
 aside ul li{
 	list-style-type: none;
 	display: inline-block;
