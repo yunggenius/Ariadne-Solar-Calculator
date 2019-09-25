@@ -51,7 +51,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 67vh;
     width: 50%;
     margin-bottom: 10px;
 }
@@ -85,7 +85,6 @@ main{
     flex-direction: column;
     background: var(--pryColor);
     width: 350px;
-    height: 520px;
     padding: 40px;
     border-radius: 5px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.9);
@@ -93,7 +92,6 @@ main{
 .form h1{
     text-align: center;
     padding: 0 0 10px 0;
-    padding: 0 0 15px;
     color: #194A21;
 }
 label{
@@ -133,12 +131,7 @@ input[type="submit"]{
     font-size: 15px;
     font-weight: 500;
 }
-textarea{
-    border-color: #194A21;
-    outline: none;
-    border-radius: 5px;
-    padding: 10px;
-}
+
 .ski-border{
     display: block;
     margin: auto;

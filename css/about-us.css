@@ -30,6 +30,10 @@ header a:hover{
     border: 1px solid #edf0f1;
     padding: 5px;
 }
+.logo a:hover{
+    border: none;
+    padding: 0;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -43,7 +47,7 @@ header nav,.logo{
 }
 
 main{
-    padding-top: 70px;
+    padding: 70px 0 50px 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -71,6 +75,8 @@ main{
 h2{
     font-size: 50px;
     text-align: center;
+    padding-bottom: 30px;
+    color: #003C00;
     padding-bottom: 25px;
     border-bottom: 1px dotted green;
 }
@@ -85,6 +91,13 @@ main p{
     height: 250px;
     width: 250px;
     padding: 15px;
+    display: block;
+    margin: auto;
+    border-radius: 15%;
+}
+pre{
+    text-align: center;
+    margin-top: 10px;
 }
 pre{
     text-align: center;
@@ -97,4 +110,12 @@ footer{
     color: #fff;
     background: #003C00;
     width: 100%;
+}
+.ski-border{
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 5px;
+    background: #003C00;
+    margin-bottom: 40px;    
 }

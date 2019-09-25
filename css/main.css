@@ -17,10 +17,6 @@ li, .button {
 }
 
 .container{
-    /* position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,6 +32,10 @@ header a{
 header a:hover{
     border: 1px solid #edf0f1;
     padding: 5px;
+}
+.logo a:hover{
+    border: none;
+    padding: 0;
 }
 header {
     display: flex;
@@ -107,6 +107,11 @@ button:hover {
 .showcase p{
     font-size: 15px;
     text-align: start;
+    padding-top: 10px;
+    color: #053f05;
+    font-weight: 700;
+    font-family: Arial;
+    text-shadow: 2px 2px 3px grey;
     padding-top: 7px;
     color: black;
     font-weight: 700;
