@@ -39,7 +39,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 20px;
-    background-color: #003C00;
+    background:#003C00;
     width: 100%;
 }
 header nav,.logo{
@@ -47,12 +47,13 @@ header nav,.logo{
 }
 
 main{
-    padding: 70px 0 50px 0;
+    padding-top: 70px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 67vh;
     width: 50%;
+    margin-bottom: 10px;
 }
 
 .logo {
@@ -72,44 +73,77 @@ main{
     transition: all 0.3s ease 0s;
 }
 
-h2{
-    font-size: 50px;
-    text-align: center;
-    padding-bottom: 30px;
-    color: #003C00;
-}
-h2, main p{
-    line-height: 30px;
-}
-main p{
-    font-weight: 500;
-    margin-top: 10px;
-}
-#calc{
-    height: 250px;
-    width: 250px;
-    padding: 15px;
-    display: block;
-    margin: auto;
-    border-radius: 15%;
-}
-pre{
-    text-align: center;
-    margin-top: 10px;
+
+.formContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+    background: var(--pryColor);
+    width: 350px;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.9);
+}
+.form h1{
+    text-align: center;
+    padding: 0 0 10px 0;
+    color: #194A21;
+}
+label{
+    font-weight: 600;
+    font-size: 16px;
+    color: #194A21;
+}
+
+input[type="text"],
+input[type="email"]{
+    width: 90%;
+    padding: 8px;
+    outline: none;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"]{
+    background: none;
+    outline: none;
+    border: none;
+    border: 1px solid #194A21;
+    color: #194A21;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    margin: 25px 0 40px 0;
+    color: #fff;
+    background-color: #003C00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.ski-border{
+    display: block;
+    margin: auto;
+    width: 130px;
+    height: 6px;
+    background: #003C00;
+    margin-bottom: 40px;    
+}
 footer{
     text-align: center;
     padding: 20px;
     color: #fff;
     background: #003C00;
     width: 100%;
-}
-.ski-border{
-    display: block;
-    margin: auto;
-    width: 160px;
-    height: 5px;
-    background: #003C00;
-    margin-bottom: 40px;    
 }
