@@ -42,7 +42,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    background: rgba(0, 46, 4, 0.57);
+    background-color: #003C00;
+    
 }
 
 main{
@@ -73,7 +74,7 @@ main{
 }
 
 .button {
-    padding: 15px 40px;
+    padding: 10px 30px;
     background-color: #053f05;
     border: none;
     border-radius: 7px;
@@ -81,7 +82,10 @@ main{
     transition: all 0.3s ease 0s;
     color: #edf0f1;
 }
-
+#bt1{
+    background-color: gold;
+    color: black;
+}
 button:hover {
     background-color: #053f05;
 }
@@ -103,9 +107,11 @@ button:hover {
     font-size: 15px;
     text-align: start;
     padding-top: 7px;
-    color: #194A21;
+    color: black;
     font-weight: 700;
     font-family: Arial;
+    text-shadow: 3px 3px 5px grey;
+    line-height: 1.5em;
 }
 .showcase-btn{
     display: flex;
