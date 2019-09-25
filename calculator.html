@@ -136,23 +136,5 @@
 			<p>Copyright © 2019 All rights reserved | Team Ariadne</p>
 		</div>
 	</footer>
-	<script type="text/javascript">
-		var id = 2;
-		function myFunction(){
-			var content = ''
-			content += '<tr class="tbody" id="'+ id +'"><td><input type="text" name="text" style="width: 180px;"></td>';							
-			content += '<td><input type="checkbox" style="width: 80px;"></td><td><input type="text" name="text" style="width: 60px;"></td>';
-			content += '<td><input type="text" name="text" style="width: 70px;"></td><td><input type="text" name="text" style="width: 70px;"></td>';
-			content += '<td><input type="text" name="text" style="width: 70px;"></td><td><input type="text" name="text" style="width: 70px;"></td>';
-			content += '<td><input type="text" name="text" style="width: 70px;"></td><td><button onclick="deleteRow('+ id +')">X</button></td></tr>';
-			document.getElementById('tbody').innerHTML += content;
-			id++;			
-		}
-
-		function deleteRow(id)
-		{
-			$('tr#' + id).remove();
-		}
-	</script>
 </body>
 </html>
