@@ -101,6 +101,7 @@ button:hover {
     font-size: 60px;
     text-align: start;
     color: #fff;
+    text-shadow: 5px 5px 5px black;
 }
 
 .showcase p{
