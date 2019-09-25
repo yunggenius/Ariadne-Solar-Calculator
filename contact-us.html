@@ -14,6 +14,7 @@
         <header>
             <div class="logo"><a href="index.html"> <img src="../img/Ariadne OffGridd.png" alt="Logo"
                         style="width:110px;"></a></div>
+            <div class="logo"><img src="../img/Ariadne OffGridd.png" alt="Logo" style="width:110px;"></div>
             <nav>
                 <ul class="nav_links">
                     <li><a href="index.html">Home</a></li>
@@ -45,6 +46,19 @@
                     <span id="ErrorSubject" style="color: red; margin-left: 15px;"> </span>
                     <textarea name="subject" id="subject" placeholder="Leave a message..." minlength="20"
                         style="height: 150px" required="required"></textarea><br>
+                <form  class="form" method="post" id="form">
+                    <h1>Contact Us</h1>
+
+                    <label for="">Full Name</label>
+                    <span id="ErrorName" style="color: red; margin-left: 15px;"> </span>                
+                    <input type="text" name="name" id="name" placeholder="Your name" required="required" minlength="4"><br>
+
+                    <label for="">Email</label>
+                    <span id="ErrorEmail" style="color: red; margin-left: 15px;"> </span>               
+                    <input type="text" name="email" id="emailaddress" placeholder="Email address" required="required"><br>
+
+                    <span id="ErrorSubject" style="color: red; margin-left: 15px;"> </span>             
+                    <textarea name="subject" id="subject" placeholder="Leave a message..." minlength="20" style="height: 150px" required="required"></textarea><br>
 
                     <input type="submit" value="Submit" id="submit">
 
@@ -58,7 +72,8 @@
     </div>
     <script type="text/javascript">
         //With init() addEventListener can call each variables easily. 
-        function init() {
+
+        function init(){
             var name = document.getElementById("name");
             var emailaddress = document.getElementById("emailaddress");
             var subject = document.getElementById("subject");
@@ -75,6 +90,20 @@
                 text.focus();   //focus() makes sure inputs entered is correct.
                 return false;
             } else {
+            name.addEventListener("blur", checkName);                   
+            emailaddress.addEventListener("keyup", checkEmail);                 
+            form.addEventListener("submit", validateForm);  
+        }
+        //To check and validate the value entered.
+        function checkName(){
+            text = document.getElementById("name");
+            if (text.value.length < 4 ) 
+            {
+                document.getElementById("ErrorName").innerHTML = "Name must be more than 4 char";
+                text.focus();   //focus() makes sure inputs entered is correct.
+                return false;
+            }else
+            {
                 document.getElementById("ErrorName").innerHTML = "";
                 return true
             }
@@ -88,6 +117,16 @@
                 text.focus(); //focus() makes sure inputs entered is correct.               
                 return false;
             } else {
+        function checkEmail(){
+            text = document.getElementById("emailaddress");
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //regex - for email validation
+            if (!re.test(String(text.value).toLowerCase())) 
+            {
+                document.getElementById("ErrorEmail").innerHTML = "Enter a valid mail";
+                text.focus(); //focus() makes sure inputs entered is correct.               
+                return false;
+            }else
+            {
                 document.getElementById("ErrorEmail").innerHTML = "";
                 return true
             }
@@ -109,6 +148,23 @@
             if (checkName() == false) { return false; }
             if (checkEmail() == false) { return false; }
             if (checkSubject() == false) { return false; }
+        function checkSubject(){
+            text = document.getElementById("subject");
+            if (text.value.length < 20){
+                document.getElementById("ErrorSubject").innerHTML = "Name must be more than 20 char";
+                text.focus(); //focus() makes sure inputs entered is correct.
+                return false;
+            }else
+            {
+                document.getElementById("ErrorSubject").innerHTML = "";
+                return true
+            }       
+        }
+        // submit form 
+        function validateForm(){
+            if (checkName() == false) { return false;}
+            if (checkEmail() == false) { return false;}
+            if (checkSubject() == false) { return false;}
             alert('Your message was sent succesfullt. Thanks...');
             return true;
         }

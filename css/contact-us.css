@@ -93,6 +93,7 @@ main{
 .form h1{
     text-align: center;
     padding: 0 0 10px 0;
+    padding: 0 0 15px;
     color: #194A21;
 }
 label{
