@@ -39,7 +39,7 @@ header {
     width: 100%;
 }
 header nav,.logo{
-    padding: 0 30px;
+    padding: 0 40px;
 }
 
 main{
@@ -95,6 +95,6 @@ footer{
     text-align: center;
     padding: 20px;
     color: #fff;
-    background: #194A21;
+    background: #003C00;
     width: 100%;
 }
