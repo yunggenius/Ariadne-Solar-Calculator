@@ -1,48 +1,72 @@
-			var id = 2;
-		function myFunction(){
-			var content = ''
-			content += '<tr class="tbody" id="'+ id +'"><td><input type="text" name="text" style="width: 180px;"></td>';							
-			content += '<td><input type="checkbox" style="width: 80px;"></td><td><input type="text" name="text" style="width: 60px;"></td>';
-			content += '<td><input type="text" name="text" style="width: 70px;"></td><td><input type="text" name="text" style="width: 70px;"></td>';
-			content += '<td><input type="text" name="text" style="width: 70px;"></td><td><input type="text" name="text" style="width: 70px;"></td>';
-			content += '<td><input type="text" name="text" style="width: 70px;"></td><td><button onclick="deleteRow('+ id +')">X</button></td></tr>';
-			document.getElementById('tbody').innerHTML += content;
-			id++;			
-		}
+		$(document).ready(function () {
 
-		function deleteRow(id)
-		{
-			$('tr#' + id).remove();
-		}
+/* Array containing wattage of appliances */
+    var wattage = [0, 65, 250, 1000, 1200, 1100, 500];
 
-	function calculate() {
-		var myBox1 = document.getElementById('box1').value;	
-		var myBox2 = document.getElementById('box2').value;	
-		var myBox3 = document.getElementById('box3').value;
-		//for ssecond line
-		// var myCat1 = document.getElementById('cat1').value;	
-		// var myCat2 = document.getElementById('cat2').value;	
-		// var myCat3 = document.getElementById('cat3').value;
-		//thrid line
-		// var myDog1 = document.getElementById('dog1').value;	
-		// var myDog2 = document.getElementById('dog2').value;	
-		// var myDog3 = document.getElementById('dog3').value;
-		var result = document.getElementById('result');
-		var result2 = document.getElementById('result2');
-		var result3 = document.getElementById('result3');
-		var result4 = document.getElementById('result4');
+/* Hide delete button of first row*/
+    $('#first_record').find('td:last-child').hide();
+/* Make 'watt hour per day' fields read only */
+    $(".whd").prop("readonly", true);
+    
+/* Add new table row */
+    $('#addItem').on('click', function () {
+        var $tr = $('#loads tr:last');
+        var $clone = $tr.clone(true);
+        
+        $clone.find('input').val('');
+        $clone.find('td:last-child').show();
+        $tr.after($clone);
+        
+    });
+    
+/* Erase row */
+    $('.delete_row').on('click', function () {
+       $(this).closest("tr").remove(); 
+    });
 
-		var resultKW = document.getElementById('resultKW');	
+/* Input stored wattage of selected appliance */
+    $('.appliance').on('change', function () {
+        var app_val = $(this).val();
+        var row = $(this).closest("tr");
+        if( Number(app_val) != Number(0)) {
+            var stored_wattage = wattage[app_val];
+            row.find(".watts").val(stored_wattage);
+            row.find(".watts").prop("readonly", true);
+        }
+        else {
+            row.find(".watts").val('');
+            row.find(".watts").prop("readonly", false);            
+        }
+            
+    });
+    
+/* Update 'watt hour per day' field after every insertion or deletion */
+    $('.userInput').on('keyup change click', function () {
+        var cell = $(this);
+        var record = cell.closest("tr");
+        
+        var quantity = record.find(".quantity").val();
+        var AC_watts = record.find(".watts").val();
+        var hrsOn = record.find(".hrsOn").val();
+                
+        var whd = Number(quantity) * Number(AC_watts) * Number(hrsOn);
+        
+        record.find(".whd").val(whd);
 
-		var myResult = myBox1 * myBox2 * myBox3; //firts line
-		// var myResult4 = myDog1 * myDog2 * myDog3;//thrid line
-		// var myResult3 = myCat1 * myCat2 * myCat3;//second line
-		var myResult2 = myResult //+ myResult3 + myResult4; //sum total of watts
-		var kw = myResult2 / 1000;  //converts watts to kilowatts
-		result.value = myResult; //prints watts
-		resultKW.value = kw;	//prints Kilowatts @yinkaaaaaa
-		result2.value = myResult2;
-		// result3.value = myResult3;
-		// result4.value = myResult4;
-	}
-
+        //Update 'total watt hours per day' and 'kilowatt hour month' fields after every insertion or deletion 
+        var total_whd = Number(0);
+        var kwh = Number(0);
+        
+        $('.whd').each(function () {
+            var new_whd = Number($(this).val());
+            total_whd = Number(total_whd) + Number(new_whd);
+            kwh = (Number(total_whd) / Number(1000)) * Number(30);
+            kwh = kwh.toFixed(2);
+            
+            $('#total_WH').val(total_whd);
+            $('#total_KWM').val(kwh);
+            
+        });
+    });
+    
+});
