@@ -23,7 +23,6 @@ body{
   overflow: hidden;
   background-color:#005000;
 }
-
 .topnav a {
   float: right;
   font-size: 16px;
@@ -147,5 +146,5 @@ footer{
     text-align: center;
     padding: 20px;
     color: #fff;
-    margin-top:12%; 
+    margin-top:12%;
 }
