@@ -46,14 +46,6 @@ body{background-color: #B2D0B2;}
 }
 
 @media screen and (max-width: 768px) {
-.topnav a:not(:first-child) {display: none;}
-.topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
 .topnav.responsive {position: relative; padding-bottom: 50px;}
 .topnav.responsive .icon {
     float: right;
@@ -74,31 +66,6 @@ body{background-color: #B2D0B2;}
     align-items: center;
 }
 
-<<<<<<< Updated upstream
-=======
-header a{
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-}
-header a:hover{
-    border: 1px solid #edf0f1;
-    padding: 5px;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 20px;
-    background-color: #003C00;
-    width: 100%;
-}
-header nav,.logo{
-    padding: 0 30px;
-}
-
->>>>>>> Stashed changes
 main{
     padding: 70px 0 50px 0;
     flex-direction: column;
@@ -128,10 +95,6 @@ main p{
     display: block;
     margin: auto;
     border-radius: 15%;
-}
-pre{
-    text-align: center;
-    margin-top: 10px;
 }
 pre{
     text-align: center;
