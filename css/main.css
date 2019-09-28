@@ -65,6 +65,26 @@ body{
     justify-content: center;
     align-items: center;
 }
+<<<<<<< Updated upstream
+=======
+
+header a{
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+header a:hover{
+    border: 1px solid #edf0f1;
+    padding: 5px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #003C00;
+>>>>>>> Stashed changes
     
 }
 main{
@@ -91,6 +111,13 @@ main{
     background-color: gold;
     color: black;
 }
+<<<<<<< Updated upstream
+=======
+#bt1{
+    background-color: gold;
+    color: black;
+}
+>>>>>>> Stashed changes
 button:hover {
     background-color: #053f05;
 }
@@ -120,12 +147,19 @@ button:hover {
     text-shadow: 2px 2px 3px grey;
     padding-top: 7px;
     color: black;
+<<<<<<< Updated upstream
     margin-top: 20px;
     font-weight: 700;
     font-family: Arial;
     text-shadow: 4px 4px 5px grey;
     line-height: 1.5em;
     width: 60%;
+=======
+    font-weight: 700;
+    font-family: Arial;
+    text-shadow: 3px 3px 5px grey;
+    line-height: 1.5em;
+>>>>>>> Stashed changes
 }
 .showcase-btn{
     display: flex;
