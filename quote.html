@@ -104,25 +104,11 @@
 				return true
 			}
 		}
-
-		function checkSubject(){
-			text = document.getElementById("subject");
-			if (text.value.length < 20){
-				document.getElementById("ErrorSubject").innerHTML = "Name must be more than 20 char";
-				text.focus(); //focus() makes sure inputs entered is correct.
-				return false;
-			}else
-			{
-				document.getElementById("ErrorSubject").innerHTML = "";
-				return true
-			}		
-		}
 		// submit form 
 		function validateForm(){
 			if (checkName() == false) { return false;}
 			if (checkEmail() == false) { return false;}
-			if (checkSubject() == false) { return false;}
-			alert('Your message was sent succesfullt. Thanks...');
+			alert('A quote has been sent to your mail.');
 			return true;
 		}
     </script>
