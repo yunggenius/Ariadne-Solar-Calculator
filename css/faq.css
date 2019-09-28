@@ -6,11 +6,16 @@
     font-family: "Montserrat", sans-serif;
 }
 body{background-color: #B2D0B2;}
-.logo{background-color:#003C00;cursor: pointer;}
+.logo{
+    background-color:#003C00;
+    cursor: pointer;
+    padding: 20px;
+}
 .logo a:hover{
     border: none;
     padding: 0;
 }
+
 .topnav {
   overflow: hidden;
   background-color:#005000;
@@ -43,17 +48,6 @@ body{background-color: #B2D0B2;}
 }
 
 @media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 768px) {
-.topnav a:not(:first-child) {display: none;}
-.topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
 .topnav.responsive {position: relative; padding-bottom: 50px;}
 .topnav.responsive .icon {
     float: right;
@@ -74,31 +68,6 @@ body{background-color: #B2D0B2;}
     align-items: center;
 }
 
-<<<<<<< Updated upstream
-=======
-header a{
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-}
-header a:hover{
-    border: 1px solid #edf0f1;
-    padding: 5px;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 20px;
-    background-color: #003C00;
-    width: 100%;
-}
-header nav,.logo{
-    padding: 0 30px;
-}
-
->>>>>>> Stashed changes
 main{
     padding: 70px 0 50px 0;
     flex-direction: column;
@@ -112,7 +81,7 @@ h2{
     text-align: center;
     padding-bottom: 30px;
     color: #003C00;
-    border-bottom: 1px dotted green;
+    padding-bottom: 25px;
 }
 h2, main p{
     line-height: 30px;
@@ -133,10 +102,6 @@ pre{
     text-align: center;
     margin-top: 10px;
 }
-pre{
-    text-align: center;
-    margin-top: 10px;
-}
 
 footer{
     text-align: center;
@@ -148,8 +113,15 @@ footer{
 .ski-border{
     display: block;
     margin: auto;
-    width: 160px;
+    width: 70px;
     height: 5px;
     background: #003C00;
     margin-bottom: 40px;    
+}
+.question{
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+h3{
+    font-size: 30px;
 }

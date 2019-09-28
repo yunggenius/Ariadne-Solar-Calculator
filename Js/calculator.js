@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
 /* Array containing wattage of appliances */
