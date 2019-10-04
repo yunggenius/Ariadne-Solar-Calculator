@@ -6,11 +6,16 @@
     font-family: "Montserrat", sans-serif;
 }
 body{background-color: #B2D0B2;}
-.logo{background-color:#003C00;cursor: pointer;}
+.logo{
+    background-color:#003C00;
+    cursor: pointer;
+    padding: 20px;
+}
 .logo a:hover{
     border: none;
     padding: 0;
 }
+
 .topnav {
   overflow: hidden;
   background-color:#005000;
@@ -40,9 +45,6 @@ body{background-color: #B2D0B2;}
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 768px) {
 }
 
 @media screen and (max-width: 768px) {
@@ -79,7 +81,7 @@ h2{
     text-align: center;
     padding-bottom: 30px;
     color: #003C00;
-    border-bottom: 1px dotted green;
+    padding-bottom: 25px;
 }
 h2, main p{
     line-height: 30px;
@@ -111,8 +113,15 @@ footer{
 .ski-border{
     display: block;
     margin: auto;
-    width: 160px;
+    width: 70px;
     height: 5px;
     background: #003C00;
     margin-bottom: 40px;    
+}
+.question{
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+h3{
+    font-size: 30px;
 }

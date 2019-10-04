@@ -42,23 +42,7 @@ body{background-color: #B2D0B2;}
   }
 }
 
-@media screen and (max-width: 768px) {
-}
 
-@media screen and (max-width: 768px) {
-.topnav.responsive {position: relative; padding-bottom: 50px;}
-.topnav.responsive .icon {
-    float: right;
-    top: 145px;
- }
-.topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-    padding: 3px 0px;
-    margin-top: 5px;
-  }
-}
 .container{
     display: flex;
     flex-direction: column;
@@ -74,14 +58,17 @@ main{
     min-height: 80vh;
     width: 70%;
 }
+a{
+    color: #0e2177;
+    text-decoration: none;
+}
 h2{
     font-size: 50px;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
     color: #003C00;
-    border-bottom: 1px dotted green;
 }
-h2, main p{
+main p{
     line-height: 30px;
 }
 main p{
@@ -111,8 +98,94 @@ footer{
 .ski-border{
     display: block;
     margin: auto;
-    width: 160px;
+    width: 70px;
     height: 5px;
     background: #003C00;
     margin-bottom: 40px;    
+}
+.ski-border2{
+    display: block;
+    margin: auto;
+    width: 40%;
+    height: 2px;
+    background: #003C00;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+.posts{
+    display: flex;
+    margin-top: 100px;
+}
+.main-post{
+    width: 70%;
+}
+.recent-news{
+    padding: 20px 10px 10px 5px;
+    height: 50%;
+    color: #003C00;
+    font-weight: 900;
+    font-size: 23px;
+    text-align: center;
+    width: 30%;
+    background: #fff;
+    border-radius: 20px;
+}
+.postblock{
+    padding: 0 50px 50px 0;
+}
+.postblock img{
+    width: 100%;
+    height: 300px;
+    padding-bottom: 20px;
+}
+.postblock h2{
+    text-align: left;
+    font-size: 20px;
+}
+.postblock sp1{
+    text-align: center;
+    padding: 15px 20px;
+}
+.topics li{
+    padding: 10px 0 50px 10px;
+    text-align: left;
+    font-size: 15px;
+}
+.topics li a{
+    color: #005000;
+    text-decoration: none;
+}
+#time{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+.topnav.responsive {position: relative; padding-bottom: 50px;}
+.topnav.responsive .icon {
+    float: right;
+    top: 145px;
+ }
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 3px 0px;
+    margin-top: 5px;
+  }
+  .posts{
+      flex-direction: column;
+  }
+  .main-post{
+      width: 100%;
+  }
+  .recent-news{
+      width: 100%;
+  }
+  .ski-border2{
+      width: 30%;
+  }
+  main{
+      width: 75%;
+  }
 }

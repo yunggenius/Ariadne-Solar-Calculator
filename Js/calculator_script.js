@@ -1,14 +1,10 @@
 $(document).ready(function () {
 
 /* Array containing wattage of appliances */
-    var wattage = [0, 60, 100, 80, 30, 18, 1000, 5000, 250, 65, 400, 80, 1100, 90, 55, 500, 1200, 200, 150, 120, 70, 55, 1100, 650, 1300, 1500];
+    var wattage = [0, 65, 250, 1000, 1200, 1100, 500];
 
-/* Store number of rows*/
-    var nxt_row_num = Number(4);
-    
 /* Hide delete button of first row*/
     $('#first_record').find('td:last-child').hide();
-    
 /* Make 'watt hour per day' fields read only */
     $(".whd").prop("readonly", true);
     
@@ -16,33 +12,30 @@ $(document).ready(function () {
     $('#addItem').on('click', function () {
         var $tr = $('#loads tr:last');
         var $clone = $tr.clone(true);
-        nxt_row_num++;
-        var $list_value = 'list' + nxt_row_num.toString();
         
         $clone.find('input').val('');
-        $clone.find('.appliances').attr('list', $list_value);
-        $clone.find('.list').attr('id', $list_value);
-        var list_n = $clone.find('.list').attr('id');
         $clone.find('td:last-child').show();
         $tr.after($clone);
+        
     });
     
 /* Erase row */
     $('.delete_row').on('click', function () {
-        $(this).closest("tr").remove();
+       $(this).closest("tr").remove(); 
     });
 
 /* Input stored wattage of selected appliance */
-    $('.appliances').on('input keyup change', function () {
-        var app_list = $('option[value = "' + $(this).val() + '"]');
-        var app = app_list.length ? app_list.attr('class') : 0;
+    $('.appliance').on('change', function () {
+        var app_val = $(this).val();
         var row = $(this).closest("tr");
-        
-        if (Number(app) > Number(0)) {
-            var stored_wattage = wattage[app];
+        if( Number(app_val) != Number(0)) {
+            var stored_wattage = wattage[app_val];
             row.find(".watts").val(stored_wattage);
-        } else {
+            row.find(".watts").prop("readonly", true);
+        }
+        else {
             row.find(".watts").val('');
+            row.find(".watts").prop("readonly", false);            
         }
             
     });
@@ -77,3 +70,4 @@ $(document).ready(function () {
     });
     
 });
+
