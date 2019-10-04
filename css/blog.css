@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+body{background-color: #B2D0B2;}
+.logo{background-color:#003C00;cursor: pointer;}
+.logo a:hover{
+    border: none;
+    padding: 0;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#005000;
+}
+
+.topnav a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 0px 12px;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+.topnav a:hover {
+    background-color:#003C00;
+    border: 1px solid #edf0f1;
+    padding: 5px;
+}
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+.topnav a:not(:first-child) {display: none;}
+.topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    padding: 70px 0 50px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 70%;
+}
+a{
+    color: #0e2177;
+    text-decoration: none;
+}
+h2{
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 5px;
+    color: #003C00;
+}
+main p{
+    line-height: 30px;
+}
+main p{
+    font-weight: 500;
+    margin-top: 10px;
+}
+#calc{
+    height: 250px;
+    width: 250px;
+    padding: 15px;
+    display: block;
+    margin: auto;
+    border-radius: 15%;
+}
+pre{
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background: #003C00;
+    
+}
+.ski-border{
+    display: block;
+    margin: auto;
+    width: 70px;
+    height: 5px;
+    background: #003C00;
+    margin-bottom: 40px;    
+}
+.ski-border2{
+    display: block;
+    margin: auto;
+    width: 40%;
+    height: 2px;
+    background: #003C00;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+.posts{
+    display: flex;
+    margin-top: 100px;
+}
+.main-post{
+    width: 70%;
+}
+.recent-news{
+    padding: 20px 10px 10px 5px;
+    height: 50%;
+    color: #003C00;
+    font-weight: 900;
+    font-size: 23px;
+    text-align: center;
+    width: 30%;
+    background: #fff;
+    border-radius: 20px;
+}
+.postblock{
+    padding: 0 50px 50px 0;
+}
+.postblock img{
+    width: 100%;
+    height: 300px;
+    padding-bottom: 20px;
+}
+.postblock h2{
+    text-align: left;
+    font-size: 20px;
+}
+.postblock sp1{
+    text-align: center;
+    padding: 15px 20px;
+}
+.topics li{
+    padding: 10px 0 50px 10px;
+    text-align: left;
+    font-size: 15px;
+}
+.topics li a{
+    color: #005000;
+    text-decoration: none;
+}
+#time{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+.topnav.responsive {position: relative; padding-bottom: 50px;}
+.topnav.responsive .icon {
+    float: right;
+    top: 145px;
+ }
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 3px 0px;
+    margin-top: 5px;
+  }
+  .posts{
+      flex-direction: column;
+  }
+  .main-post{
+      width: 100%;
+  }
+  .recent-news{
+      width: 100%;
+  }
+  .ski-border2{
+      width: 30%;
+  }
+  main{
+      width: 75%;
+  }
+}
