@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="footer, address, phone, icons" />
+    <title>Team Ariadne Our Services page</title>
+      <link rel="stylesheet" type="text/css" href="payment page.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+
+<body>
+        <div class="header">
+                <div class="content">
+                    <div id="top">
+                        <div class="logo">
+                            <img src="https://res.cloudinary.com/awesocode/image/upload/v1569269263/Team%20Ariadne%27s%20Task%20Files/hfqpygf12xz1vvhuw2gd.png" style="width: 110px;">
+                        </div>
+                        <div class="topnav" id="myTopnav">
+                            <a  href="#home">Contact Us</a>
+                            <a href="#news">Faq</a>
+                            <a href="#about" class="active">Calculator</a>
+                            <a href="#about">Products</a>
+                            <a href="#about">About Us</a>
+                            <a href="#about">Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <section>
+        <h2>Payment via <img src="https://res.cloudinary.com/onose/image/upload/v1570095048/fpheobgyazbj3masgi5q.svg" width="200"></h2>
+        <br><br>
+        <form>
+    <div class="form-container">
+      <div class="personal-information">
+        <h1>Payment Information</h1>
+      </div> <!-- end of personal-information -->
+           <br>
+          <input id="column-left" type="text" name="first-name" placeholder="First Name"/>
+          <input id="column-right" type="text" name="last-name" placeholder="Surname"/>
+          <input id="input-field" type="text" name="number" placeholder="Card Number"/>
+          <input id="column-left" type="text" name="expiry" placeholder="MM / YY"/>
+          <input id="column-right" type="text" name="cvc" placeholder="CCV"/>
+         
+          <div class="card-wrapper"></div>
+      
+          <input id="input-field" type="text" name="street address" required="required" autocomplete="on" maxlength="45" placeholder="Street Address"/>
+          <input id="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
+          <input id="column-right" type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
+          <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/>
+          <input id="input-button" type="submit" value="Buy Now"/>
+        
+    </form>
+  </div>
+</section>
+  <footer>
+      <p>&copy; 2019 All Right Reserved | Designed By Team Ariadne</p>
+  </footer>
+  <script>
+  
+  $('form').card({
+    container: '.card-wrapper',
+    width: 280,
+
+    formSelectors: {
+        nameInput: 'input[name="first-name"], input[name="last-name"]'
+    }
+});
+
+<form>
+    <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+    <button type="button" onClick="payWithRave()">Buy Now</button>
+    </form>
+    <script>
+        const API_publicKey = "<ADD YOUR PUBLIC KEY HERE>";
+        function payWithRave() {
+            var x=getpaidSetup({
+                PBFPubKey:
+                API_publicKey,
+                customer_email:
+                "user@example.com",
+                amount:2000,
+                customer_phone:"234099940409"
+                currency:"NGN",
+                txref:"rave-123456",
+                meta:[{
+                    metaname:"flightID"
+                    metavalue:"AP1234"
+                }],
+                onclose:function() {},
+                callback:
+                function(response) {
+                    var txref = response.tx.txRef;//collect txRef returned and pass to a server page to complete status check.
+                    console.log("This is the response returned after a charge", response);
+                    if (
+                        response.tx.chargeResponseCode =="00"
+                        ||
+                        response.tx.chargeResponseCode=="0"
+                    ){
+                        //redirectto a success page
+                    } else {
+                        //redirect to a failure page.
+                    }
+x.close();//use this to close the modal immediately after payment.
+                }
+            });
+        }
+    
+</script>
+</body>
+</html>
+          
+    
