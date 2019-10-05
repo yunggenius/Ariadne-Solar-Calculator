@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="footer, address, phone, icons" />
+    <title>Team Ariadne Our Services page</title>
+      <link rel="stylesheet" type="text/css" href="payment page.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>  
+</head>
+
+<body>
+        <div class="header">
+                <div class="content">
+                    <div id="top">
+                        <div class="logo">
+                            <img src="https://res.cloudinary.com/awesocode/image/upload/v1569269263/Team%20Ariadne%27s%20Task%20Files/hfqpygf12xz1vvhuw2gd.png" style="width: 110px;">
+                        </div>
+                        <div class="topnav" id="myTopnav">
+                            <a href="contact-us.html">Contact Us</a>
+                            <a href="blog.html">Blog</a>
+                            <a href="faq.html">FAQ</a>
+                            <a href="calculator.html">Calculator</a>
+                            <a href="our-services.html">Our Services</a>
+                            <a href="about-us.html">About</a>
+                            <a href="index.html">Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <section>
+        <h2>Payment via <img src="https://res.cloudinary.com/onose/image/upload/v1570095048/fpheobgyazbj3masgi5q.svg" width="200"></h2>
+        <br><br>
+        <form>
+    <div class="form-container">
+      <div class="personal-information">
+        <h1>Payment Information</h1>
+      </div> <!-- end of personal-information -->
+           <br>
+          <input id="column-left" type="text" name="first-name" placeholder="First Name"/>
+          <input id="column-right" type="text" name="last-name" placeholder="Surname"/>
+          <input id="input-field" type="text" name="number" placeholder="Card Number"/>
+          <input id="column-left" type="text" name="expiry" placeholder="MM / YY"/>
+          <input id="column-right" type="text" name="cvc" placeholder="CCV"/>
+         
+          <div class="card-wrapper"></div>
+      
+          <input id="input-field" type="text" name="street address" required="required" autocomplete="on" maxlength="45" placeholder="Street Address"/>
+          <input id="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
+          <input id="column-right" type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
+          <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/>
+          <br>
+          <a class="flwpug_getpaid" 
+          data-PBFPubKey="2222" 
+          data-txref="rave-123456" 
+          data-amount="2000" 
+          data-customer_email="user@example.com" 
+          data-meta-flightID="APX0093GHK"
+          data-currency="NGN" 
+          data-pay_button_text="Pay Now" font-size="1em" width="30px"
+          data-country="NG" 
+          data-redirect_url="https://your-website.com/urlredirect"></a>
+        
+          <script type="text/javascript" src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+        </form>
+        
+    </form>
+  </div>
+</section>
+  <footer>
+      <p>&copy; 2019 All Right Reserved | Designed By Team Ariadne</p>
+  </footer>
+  <script>
+  {
+    "status": "success",
+    "message": "Charge Complete",
+    "data": {
+      "data": {
+        "responsecode": "00",
+        "responsemessage": "successful"
+      },
+      "tx": {
+        "id": 10604,
+        "txRef": "12373",
+        "orderRef": "URF_1501152088995_7069035",
+        "flwRef": "FLW-MOCK-f0ef7b5fc0e9a2e00e02169aff4572de",
+        "redirectUrl": "http://127.0.0",
+        "device_fingerprint": "69e6b7f0b72037aa8428b70fbe03986c",
+        "settlement_token": null,
+        "cycle": "recurring-daily",
+        "amount": 290,
+        "charged_amount": 290,
+        "appfee": 0,
+        "merchantfee": 0,
+        "merchantbearsfee": 0,
+        "chargeResponseCode": "00",
+        "chargeResponseMessage": "Success-Pending-otp-validation",
+        "authModelUsed": "PIN",
+        "currency": "NGN",
+        "IP": "197.242.109.215",
+        "narration": "FLW-PBF CARD Transaction ",
+        "status": "successful",
+        "vbvrespmessage": "successful",
+        "authurl": "http://flw-pms-dev.eu-west-1.elasticbeanstalk.com/mockvbvpage?ref=FLW-MOCK-f0ef7b5fc0e9a2e00e02169aff4572de&code=00&message=Approved. Successful",
+        "vbvrespcode": "00",
+        "acctvalrespmsg": null,
+        "acctvalrespcode": null,
+        "paymentType": "card",
+        "paymentId": "2",
+        "fraud_status": "ok",
+        "charge_type": "normal",
+        "is_live": 0,
+        "createdAt": "2017-07-27T10:41:28.000Z",
+        "updatedAt": "2017-07-27T10:41:42.000Z",
+        "deletedAt": null,
+        "customerId": 517,
+        "AccountId": 134,
+        "customer": {
+          "id": 517,
+          "phone": null,
+          "fullName": "teni adebola",
+          "customertoken": null,
+          "email": "temi@gmail.com",
+          "createdAt": "2017-06-02T10:33:13.000Z",
+          "updatedAt": "2017-06-02T10:33:13.000Z",
+          "deletedAt": null,
+          "AccountId": 134
+        },
+        "chargeToken": {
+          "user_token": "82bfc",
+          "embed_token": "flw-t0-2a2646448375873c9060eeffe48bdedb-m03k"
+        }
+      }
+    }
+</script>
+</form>
+</body>
+</html>
+          
+    
